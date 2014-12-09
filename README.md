@@ -42,6 +42,19 @@ scope of each feature.
     |--- login.mod.js
     |--- login.ctrl.js
     |--- auth.svc.js
+    
+Further nesting may be done for elaborate features, where some of the components are in high numbers.
+
+    |
+    |- contact
+    |--- contact.mod.js
+    |--- contact.ctrl.js
+    |--- directives
+    |---- company_select.dir.js
+    |---- contact_picture.dir.js
+    |---- branch_map.dir.js
+    |---- branch_map.dir.js
+
 
 **See the [ngTemplate project](http://grumpywizards.com/ngTemplate) 
 for an example of how to organise your application and what each 
@@ -94,7 +107,7 @@ application. This mitigates the possibility that the angular source,
 names, giving unexpected results.
 
 ###Prefixing
-All components (directives, controllers, services) must be
+Directives and Services must be
 prefixed with an identifier that is relevant to their scope:
 
 - if shared across all applications use a company prefix: 'wiz' for Grumpy
@@ -132,6 +145,7 @@ To aid readability in the solution the type of component should be
 appended to each file name, for example:
 
 - dashboard.mod.js  - the module declaration
+- dashboard.conf.js  - the module configuration
 - dashboard.dir.js – a directive
 - dashboard.svc.js – a service or factory
 - dashboard.ctrl.js – a controller
